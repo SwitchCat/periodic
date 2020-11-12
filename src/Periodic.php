@@ -22,27 +22,27 @@ class Periodic
 
     public function getAll():array
     {
-        return $this->JSONDB->select('*' )->from('elements.json')->get();
+        return $this->JSONDB->select('*' )->from('elements.json')->get()[0];
     }
 
     public function getElementByName(string $name):array
     {
-        return $this->JSONDB->select('*')->from( 'elements.json')->where(['name' => $name])->get();
+        return $this->JSONDB->select('*')->from( 'elements.json')->where(['name' => $name])->get()[0];
     }
 
     public function getElementBySymbol(string $symbol):array
     {
-        return $this->JSONDB->select('*')->from( 'elements.json')->where(['symbol' => $symbol])->get();
+        return $this->JSONDB->select('*')->from( 'elements.json')->where(['symbol' => $symbol])->get()[0];
     }
 
     public function getElementByNumber(int $number):array
     {
-        return $this->JSONDB->select('*')->from( 'elements.json')->where(['number' => $number])->get();
+        return $this->JSONDB->select('*')->from( 'elements.json')->where(['number' => $number])->get()[0];
     }
 
     public function getElementsByCategory(string $category):array
     {
-        return $this->JSONDB->select('*')->from( 'elements.json')->where(['category' => $category])->get();
+        return $this->JSONDB->select('*')->from( 'elements.json')->where(['category' => $category])->get()[0];
     }
 
     public function getElementsByAtomicMass(int $min, int $max):array
@@ -52,7 +52,7 @@ class Periodic
 
     public function getElementsByPhase(string $phase):array
     {
-        return $this->JSONDB->select('*')->from( 'elements.json')->where(['phase' => $phase])->get();
+        return $this->JSONDB->select('*')->from( 'elements.json')->where(['phase' => $phase])->get()[0];
     }
 
     public function getElementsByMeltingPoint(int $min, int $max):array
