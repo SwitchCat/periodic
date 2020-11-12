@@ -1,0 +1,129 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ff4c81fd1586b1961feee9aa41a1a0be",
+    "packages": [
+        {
+            "name": "hansott/range-regex",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hansott/range-regex.git",
+                "reference": "23f25cf24069d22d49a8d14aa5bc89c2f2c969af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hansott/range-regex/zipball/23f25cf24069d22d49a8d14aa5bc89c2f2c969af",
+                "reference": "23f25cf24069d22d49a8d14aa5bc89c2f2c969af",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~5.5|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HansOtt\\RangeRegex\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hans Ott",
+                    "email": "hansott@hotmail.be",
+                    "homepage": "https://hansott.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Returns a regex-compatible range from two numbers, min and max.",
+            "homepage": "https://github.com/hansott/range-regex",
+            "keywords": [
+                "Match",
+                "brace",
+                "expansion",
+                "glob",
+                "hansott",
+                "number",
+                "numeric",
+                "range",
+                "ranges",
+                "regex",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/hansott/range-regex/issues",
+                "source": "https://github.com/hansott/range-regex/tree/master"
+            },
+            "abandoned": true,
+            "time": "2016-07-11T08:46:34+00:00"
+        },
+        {
+            "name": "jajo/jsondb",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/donjajo/php-jsondb.git",
+                "reference": "41c94c34775b4d4f2d0494cc2e387659efe1ee4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/donjajo/php-jsondb/zipball/41c94c34775b4d4f2d0494cc2e387659efe1ee4e",
+                "reference": "41c94c34775b4d4f2d0494cc2e387659efe1ee4e",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jajo\\": "src/"
+                },
+                "files": [
+                    "helpers/dataTypes.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jajo",
+                    "email": "me@donjajo.com"
+                }
+            ],
+            "description": "A PHP Class that reads JSON file as a database. Use for sample DBs",
+            "support": {
+                "issues": "https://github.com/donjajo/php-jsondb/issues",
+                "source": "https://github.com/donjajo/php-jsondb/tree/dev"
+            },
+            "time": "2020-04-17T19:02:24+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

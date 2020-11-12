@@ -1,0 +1,27 @@
+{
+    "name": "switchcat/periodic",
+    "description": "Periodic table utility class",
+    "type": "library",
+    "keywords": ["mendeleiev","periodic","atomic","physics","chemistry"],
+    "require": {
+        "php": ">=7.4",
+        "jajo/jsondb": "^2.1",
+        "hansott/range-regex": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SwitchCat\\Periodic\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Felix Eloy",
+            "email": "contact@switchcat.agency",
+            "homepage": "https://switchcat.agency",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
