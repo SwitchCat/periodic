@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * File:    Periodic.php
  * Created: 12-11-20
@@ -10,7 +10,7 @@ use Jajo\JSONDB;
 use HansOtt\RangeRegex\FactoryDefault;
 use HansOtt\RangeRegex\Range;
 
-class Periodic
+final class Periodic
 {
 
     private \Jajo\JSONDB $JSONDB;
@@ -27,12 +27,12 @@ class Periodic
 
     public function getElementByName(string $name):array
     {
-        return $this->JSONDB->select('*')->from( 'elements.json')->where(['name' => $name])->get()[0];
+        return $this->JSONDB->select('*')->from( 'elements.json')->where(['name' => ucfirst($name)])->get()[0];
     }
 
     public function getElementBySymbol(string $symbol):array
     {
-        return $this->JSONDB->select('*')->from( 'elements.json')->where(['symbol' => $symbol])->get()[0];
+        return $this->JSONDB->select('*')->from( 'elements.json')->where(['symbol' => ucfirst($symbol)])->get()[0];
     }
 
     public function getElementByNumber(int $number):array
@@ -72,9 +72,17 @@ class Periodic
 
     private function regexRange(float $min, float $max):string
     {
+        $min = (int)($min);
+        $max = (int)($max);
+        if($min >= $max)
+        {
+            $min = 0;
+            $max = 1000000000;
+        }
         $factory = new FactoryDefault();
         $converter = $factory->getConverter();
-        $range = new Range((int)$min, (int)$max);
+        $range = new Range($min, $max);
         return sprintf('/^(%s)$/', $converter->toRegex($range));
+        
     }
 }
