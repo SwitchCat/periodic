@@ -16,7 +16,7 @@ class PeriodicTest  extends TestCase
     public function __construct(?string $name = NULL, array $data = [], $dataName = '')
     {
         parent::__construct($name, $data, $dataName);
-        $this->path = $path = 'vendor/switchcat/periodic/src/elements.json';
+        $this->path = 'vendor/switchcat/periodic/src/elements.json';
     }
 
     public function testJsonElementFileExist()
