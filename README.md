@@ -1,4 +1,5 @@
 <!-- PROJECT SHIELDS -->
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0d02d231c7e744cca888ead3e390267a)](https://app.codacy.com/gh/SwitchCat/periodic?utm_source=github.com&utm_medium=referral&utm_content=SwitchCat/periodic&utm_campaign=Badge_Grade)
 [![Twitter Follow](https://img.shields.io/twitter/follow/SwitchcatA?style=social)](https://twitter.com/SwitchcatA)
 [![Issues](https://img.shields.io/github/issues/SwitchCat/framework.svg?style=flat-square)](https://github.com/SwitchCat/periodic/issues)
 ![GitHub All Releases](https://img.shields.io/github/downloads/SwitchCat/periodic/total?logo=GitHub)
