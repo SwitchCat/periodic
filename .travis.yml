@@ -1,4 +1,25 @@
+os: linux
+dist: xenial
 language: php
+
+
 php:
   - 7.4.0
   - nightly
+  
+before_script:
+    - travis_retry composer self-update
+
+before_install:
+  # Speed up build time by disabling Xdebug when its not needed.
+  - phpenv config-rm xdebug.ini || echo 'No xdebug config.'
+  # PHPUnit 8.x is not (yet) supported, so prevent issues with Travis images using it.
+  - |
+    if [[ $TRAVIS_PHP_VERSION != "nightly" ]]; then
+      travis_retry composer install
+    elif [[ $TRAVIS_PHP_VERSION == "nightly" ]]; then
+      // Allow installing "incompatible" PHPUnit version on PHP 8/nightly.
+      travis_retry composer install --ignore-platform-reqs
+    fi
+script:
+  - vendor/bin/phpunit tests/PeriodicTest.php
