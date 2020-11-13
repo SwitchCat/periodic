@@ -31,8 +31,11 @@ class PeriodicTest  extends TestCase
 
     public function testFileIsValidJson()
     {
-        $this->assertTrue(json_decode(file_get_contents($this->path)) !== NULL);
-        $this->assertTrue(json_decode(file_get_contents($this->path)) !== FALSE);
+        $handle = fopen($this->path, "r");
+        $content = fread($handle, filesize($this->path));
+        fclose($handle);
+        $this->assertTrue(json_decode($content) !== NULL);
+        $this->assertTrue(json_decode($content) !== FALSE);
     }
 
     public function testRangeIsValidRegex()
