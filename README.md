@@ -79,7 +79,7 @@ $Periodic->getElementsByCategory(string $category);
 ```
 * Get a collection of elements by atomic mass range 
 ```sh
-$Periodic->getElementsByAtomicMass(int $min, int $max);
+$Periodic->getElementsByAtomicMass(float $min, float $max);
 ```
 * Get an element by phase
 ```sh
@@ -87,15 +87,15 @@ $Periodic->getElementsByPhase(string $phase);
 ```
 * Get a collection of elements by melting point range  
 ```sh
-$Periodic->getElementsByMeltingPoint(int $min, int $max);
+$Periodic->getElementsByMeltingPoint(float $min, float $max);
 ```
 * Get a collection of elements by boiling point range
 ```sh
-$Periodic->getElementsByBoilingPoint(int $min, int $max);
+$Periodic->getElementsByBoilingPoint(float $min, float $max);
 ```
 * Get a collection of elements by density range
 ```sh
-$Periodic->getElementsByDensity(int $min, int $max);
+$Periodic->getElementsByDensity(float $min, float $max);
 ```
 
 <!-- CONTRIBUTING -->
