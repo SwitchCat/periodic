@@ -45,7 +45,7 @@ class Periodic
         return $this->JSONDB->select('*')->from( 'elements.json')->where(['category' => $category])->get()[0];
     }
 
-    public function getElementsByAtomicMass(int $min, int $max):array
+    public function getElementsByAtomicMass(float $min, float $max):array
     {
         return $this->JSONDB->select('*')->from( 'elements.json')->where(array( "atomic_mass" => JSONDB::regex( $this->regexRange($min, $max))), JSONDB::AND)->get();
     }
@@ -55,28 +55,26 @@ class Periodic
         return $this->JSONDB->select('*')->from( 'elements.json')->where(['phase' => $phase])->get()[0];
     }
 
-    public function getElementsByMeltingPoint(int $min, int $max):array
+    public function getElementsByMeltingPoint(float $min, float $max):array
     {
         return $this->JSONDB->select('*')->from( 'elements.json')->where(array( "melt" => JSONDB::regex( $this->regexRange($min, $max))), JSONDB::AND)->get();
     }
 
-    public function getElementsByBoilingPoint(int $min, int $max):array
+    public function getElementsByBoilingPoint(float $min, float $max):array
     {
         return $this->JSONDB->select('*')->from( 'elements.json')->where(array( "boil" => JSONDB::regex( $this->regexRange($min, $max))), JSONDB::AND)->get();
     }
 
-    public function getElementsByDensity(int $min, int $max):array
+    public function getElementsByDensity(float $min, float $max):array
     {
         return $this->JSONDB->select('*')->from( 'elements.json')->where(array( "density" => JSONDB::regex( $this->regexRange($min, $max))), JSONDB::AND)->get();
     }
 
-    private function regexRange(int $min, int $max):string
+    private function regexRange(float $min, float $max):string
     {
-        $min = intval($min);
-        $max = intval($max);
         $factory = new FactoryDefault();
         $converter = $factory->getConverter();
-        $range = new Range($min, $max);
+        $range = new Range((int)$min, (int)$max);
         return sprintf('/^(%s)$/', $converter->toRegex($range));
     }
 }
