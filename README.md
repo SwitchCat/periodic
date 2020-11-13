@@ -3,6 +3,7 @@
 [![Issues](https://img.shields.io/github/issues/SwitchCat/framework.svg?style=flat-square)](https://github.com/SwitchCat/periodic/issues)
 ![GitHub All Releases](https://img.shields.io/github/downloads/SwitchCat/periodic/total?logo=GitHub)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/7337eff1e4c749799460552e25db4b06)](https://www.codacy.com/gh/SwitchCat/periodic/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SwitchCat/periodic&amp;utm_campaign=Badge_Grade)
 <img src="https://img.shields.io/static/v1?label=SwitchCat&message=Framework&color=ff7701&style=flat-square" />
 
 <br>
